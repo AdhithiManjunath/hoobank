@@ -7,7 +7,7 @@ const Button = ({ styles }) => {
   const handleClick = () => {
     navigate("/signup");
   };
-
+// see , we tried adding to organisation , but then couldnt host it coz it asked for paid plain , now just pushing normally to check deployment  
   return (
     <button
       type="button"
