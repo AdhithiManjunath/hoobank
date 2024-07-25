@@ -36,7 +36,9 @@ const App = () => (
                   <Hero />
                 </div>
               </div>
-              <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+              <div
+                className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}
+              >
                 <div className={`${styles.boxWidth}`}>
                   <Stats />
                   <Business />
@@ -51,26 +53,19 @@ const App = () => (
             </>
           }
         />
-        
-     
-      
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/onboarding/*" element={<MultiStepForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
-    
       </Routes>
 
-       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Footer />
         </div>
       </div>
     </div>
-      
-      
-     
-
   </Router>
 );
 
