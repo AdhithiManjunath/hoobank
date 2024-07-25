@@ -1,11 +1,11 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Button = ({ styles }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/login');
+    navigate("/signup");
   };
 
   return (

@@ -20,12 +20,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    // Mock login validation
-    if (formData.email === 'user@example.com' && formData.password === 'password') {
-      navigate('/onboarding');
-    } else {
-      setError('Invalid email or password');
-    }
+   
   };
 
   const handleSignupRedirect = () => {
