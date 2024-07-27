@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
@@ -17,56 +17,62 @@ import Signup from './components/Signup';
 import MultiStepForm from './components/MultiStepForm';
 import styles from './style';
 
-const App = () => (
-  <Router>
-    <div className="bg-primary w-full overflow-hidden">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar />
+
+const App = () => {
+
+  //  const x = useParams();
+  //  console.log(x);
+
+  return (
+    <Router>
+      <div className="bg-primary w-full overflow-hidden">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+                  <div className={`${styles.boxWidth}`}>
+                    <Navbar />
+                  </div>
+                </div>
+                
+                <div className={`bg-primary ${styles.flexStart}`}>
+                  <div className={`${styles.boxWidth}`}>
+                    <Hero />
+                  </div>
+                </div>
+                <div
+                  className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}
+                >
+                  <div className={`${styles.boxWidth}`}>
+                    <Stats />
+                    <Business />
+                    <Billing />
+                    <CardDeal />
+                    <Testimonials />
+                    <Clients />
+                    <CTA />
+                  </div>
+                </div>
+              </>
+            }
+          />
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/onboarding/*" element={<MultiStepForm />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+
+        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+          <div className={`${styles.boxWidth}`}>
+            <Footer />
+          </div>
         </div>
       </div>
-
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <div className={`bg-primary ${styles.flexStart}`}>
-                <div className={`${styles.boxWidth}`}>
-                  <Hero />
-                </div>
-              </div>
-              <div
-                className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}
-              >
-                <div className={`${styles.boxWidth}`}>
-                  <Stats />
-                  <Business />
-                  <Billing />
-                  <CardDeal />
-                  <Testimonials />
-                  <Clients />
-                  <CTA />
-                  
-                </div>
-              </div>
-            </>
-          }
-        />
-
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/onboarding/*" element={<MultiStepForm />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
-
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Footer />
-        </div>
-      </div>
-    </div>
-  </Router>
-);
+    </Router>
+  );
+};
 
 export default App;
