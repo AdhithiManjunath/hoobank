@@ -6,6 +6,15 @@ import {Bar, Doughnut, Line} from "react-chartjs-2";
 import sourceData from "../data/sourceData.json";
 import { close, logo, menu } from "../assets";
 
+// import React from "react";
+import CardDataStats from "./CardDataStats";
+import ChartOne from "./Charts/ChartOne";
+import ChartThree from "./Charts/ChartThree";
+import ChartTwo from "./Charts/ChartTwo";
+import ChatCard from "./chat/ChatCard";
+import MapOne from "./Maps/MapOne";
+import TableOne from "./Tables/TableOne";
+
 
 
 
@@ -52,9 +61,8 @@ const Dashboard = () => {
 
   return (
     <>
-      <div>
-        
-      </div>
+      
+         
 
       <div className="flex-1 px-20 py-10 ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

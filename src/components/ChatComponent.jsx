@@ -46,7 +46,7 @@ const ChatComponent = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen w-full max-w-screen-lg mx-auto my-auto mt-10  p-4 rounded-lg bg-gray-100">
+    <div className="flex flex-col h-screen w-full max-w-screen-lg mx-auto my-auto mt-10  p-4 rounded-lg bg-white">
       <div className="flex-1 overflow-y-auto p-4">
         {messages.map((msg, index) => (
           <div
@@ -59,7 +59,7 @@ const ChatComponent = () => {
               className={`max-w-[60%] p-3 rounded-lg break-words ${
                 msg.type === "user"
                   ? "bg-cyan-400 text-black"
-                  : "bg-gray-300 text-gray-800"
+                  : "bg-gray-700 text-black"
               }`}
             >
               {msg.text}
