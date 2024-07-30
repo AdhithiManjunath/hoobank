@@ -11,19 +11,20 @@ import { close, logo, menu } from "../assets";
 
 
 
+
 const lessons = [
   {
     id: 1,
-    title: "Request service",
+    title: "Ask for service",
 
-    route: "/lessons/request_service",
+    route: "/ChatSection",
     imageUrl: services,
   },
   {
     id: 2,
-    title: "explore products",
+    title: "Ask for AI",
 
-    route: "/lessons/explore_products",
+    route: "/audioStreamer",
     imageUrl: services,
   },
   {
@@ -51,20 +52,43 @@ const Dashboard = () => {
 
   return (
     <>
-      {/* <div className=" flex gap-10 justify-center items-center min-h-screen mx-auto flex-row h-full w-[50%]">
-        <div className="charts bg-white w-[80%] h-full">
-          <MyChart />
-        </div>
-        <div className='flex flex-col'>
-          <div className="bg-[#1500ff] h-full">right-1</div>
-          <div className="bg-[#00ff04] h-full">right-2</div>
-        </div>
-      </div> */}
       <div>
-        <nav className="w-full flex py-6 px-10 justify-center gap-10 items-center navbar">
-      <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
-      <h2 className='font-bold text-2xl text-white align-middle'>DashBoard</h2>
-      </nav>
+        
+      </div>
+
+      <div className="flex-1 px-20 py-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="p-4 bg-gray-900 rounded-[20px] cursor-pointer transform transition-transform hover:scale-105">
+            <div className="text-lg font-semibold text-white">Total Income</div>
+            <div className="text-2xl font-bold text-white">$32,980.45</div>
+            <div className="text-green-500 text-base">
+              ↑ 12.3% Compared to last month
+            </div>
+          </div>
+          <div className="p-4 bg-gray-900 rounded-[20px] cursor-pointer transform transition-transform hover:scale-105">
+            <div className="text-lg font-semibold text-white">Profit</div>
+            <div className="text-2xl font-bold text-white">$32,980.45</div>
+            <div className="text-green-500 text-base">
+              ↑ 12.3% Compared to last month
+            </div>
+          </div>
+          <div className="p-4 bg-gray-900 rounded-[20px] cursor-pointer transform transition-transform hover:scale-105">
+            <div className="text-lg font-semibold text-white">Total Views</div>
+            <div className="text-2xl font-bold text-white">32,980.45</div>
+            <div className="text-red-500 text-base">
+              ↓ 12.3% Compared to last month
+            </div>
+          </div>
+          <div className="p-4 bg-gray-900 rounded-[20px] cursor-pointer transform transition-transform hover:scale-105">
+            <div className="text-lg font-semibold text-white">
+              Conversion Rate
+            </div>
+            <div className="text-2xl font-bold text-white">4.34%</div>
+            <div className="text-red-500 text-base">
+              ↓ 12.3% Compared to last month
+            </div>
+          </div>
+        </div>
       </div>
 
       <div>
@@ -86,45 +110,6 @@ const Dashboard = () => {
                 </h2>
               </div>
             ))}
-          </div>
-
-          <div className="flex-1 px-20 py-10 ">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="p-4 bg-gray-900 rounded-[20px] cursor-pointer transform transition-transform hover:scale-105">
-                <div className="text-lg font-semibold text-white">
-                  Total Income
-                </div>
-                <div className="text-2xl font-bold text-white">$32,980.45</div>
-                <div className="text-green-500 text-base">
-                  ↑ 12.3% Compared to last month
-                </div>
-              </div>
-              <div className="p-4 bg-gray-900 rounded-[20px] cursor-pointer transform transition-transform hover:scale-105">
-                <div className="text-lg font-semibold text-white">Profit</div>
-                <div className="text-2xl font-bold text-white">$32,980.45</div>
-                <div className="text-green-500 text-base">
-                  ↑ 12.3% Compared to last month
-                </div>
-              </div>
-              <div className="p-4 bg-gray-900 rounded-[20px] cursor-pointer transform transition-transform hover:scale-105">
-                <div className="text-lg font-semibold text-white">
-                  Total Views
-                </div>
-                <div className="text-2xl font-bold text-white">32,980.45</div>
-                <div className="text-red-500 text-base">
-                  ↓ 12.3% Compared to last month
-                </div>
-              </div>
-              <div className="p-4 bg-gray-900 rounded-[20px] cursor-pointer transform transition-transform hover:scale-105">
-                <div className="text-lg font-semibold text-white">
-                  Conversion Rate
-                </div>
-                <div className="text-2xl font-bold text-white">4.34%</div>
-                <div className="text-red-500 text-base">
-                  ↓ 12.3% Compared to last month
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="flex flex-row gap-20 justify-center py-10">

@@ -16,6 +16,8 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import MultiStepForm from './components/MultiStepForm';
 import styles from './style';
+import ChatComponent from './components/ChatComponent';
+import AudioStreamer from './components/AudioStreamer';
 
 
 const App = () => {
@@ -36,7 +38,7 @@ const App = () => {
                     <Navbar />
                   </div>
                 </div>
-                
+
                 <div className={`bg-primary ${styles.flexStart}`}>
                   <div className={`${styles.boxWidth}`}>
                     <Hero />
@@ -63,6 +65,8 @@ const App = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/onboarding/*" element={<MultiStepForm />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/chatSection" element={<ChatComponent />} />
+          <Route path="/audioStreamer" element={<AudioStreamer />} />
         </Routes>
 
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>

@@ -126,7 +126,7 @@ const AccountSetupForm = () => {
           "http://localhost:5000/api/admin/createAnswers",
           convertedData
         );
-        
+
         console.log(response);
         navigate("/dashboard");
       } catch (err) {
@@ -259,7 +259,7 @@ const AccountSetupForm = () => {
             htmlFor="securityQuestions"
             className="block text-gray-300 font-bold mb-2"
           >
-            6. Set up security questions for account recovery?
+            6. Security questions enabled?
           </label>
           <select
             id="securityQuestions"
@@ -278,7 +278,7 @@ const AccountSetupForm = () => {
             htmlFor="authentication"
             className="block text-gray-300 font-bold mb-2"
           >
-            7. Preferred login method:
+            7. Preferred authentication method:
           </label>
           <select
             id="authentication"
@@ -288,20 +288,20 @@ const AccountSetupForm = () => {
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-gray-600"
           >
             <option value="Password">Password</option>
-            <option value="Biometric">Biometric</option>
+            <option value="Fingerprint">Fingerprint</option>
+            <option value="Facial Recognition">Facial Recognition</option>
+            <option value="OTP">OTP</option>
           </select>
         </div>
 
-        <h2 className={`${styles.heading2} mb-6 text-white`}>
-          Service Preferences
-        </h2>
+        <h2 className={`${styles.heading2} mb-6 text-white`}>Services</h2>
 
         <div className="mb-4">
           <label
             htmlFor="services"
             className="block text-gray-300 font-bold mb-2"
           >
-            8. Most interested in:
+            8. Services interested in:
           </label>
           <input
             id="services"
@@ -323,7 +323,7 @@ const AccountSetupForm = () => {
             htmlFor="moreInfo"
             className="block text-gray-300 font-bold mb-2"
           >
-            9. Services you want more information about:
+            9. More information required:
           </label>
           <input
             id="moreInfo"
@@ -345,7 +345,7 @@ const AccountSetupForm = () => {
             htmlFor="specificGoals"
             className="block text-gray-300 font-bold mb-2"
           >
-            10. Specific goals or needs:
+            10. Any specific goals:
           </label>
           <input
             id="specificGoals"
@@ -362,16 +362,14 @@ const AccountSetupForm = () => {
           ) : null}
         </div>
 
-        <h2 className={`${styles.heading2} mb-6 text-white`}>
-          Communication Preferences
-        </h2>
+        <h2 className={`${styles.heading2} mb-6 text-white`}>Preferences</h2>
 
         <div className="mb-4">
           <label
             htmlFor="language"
             className="block text-gray-300 font-bold mb-2"
           >
-            11. Preferred language for communication:
+            11. Preferred language:
           </label>
           <input
             id="language"
@@ -393,7 +391,7 @@ const AccountSetupForm = () => {
             htmlFor="timeZone"
             className="block text-gray-300 font-bold mb-2"
           >
-            12. Preferred time zone:
+            12. Time zone:
           </label>
           <input
             id="timeZone"
@@ -415,7 +413,7 @@ const AccountSetupForm = () => {
             htmlFor="updates"
             className="block text-gray-300 font-bold mb-2"
           >
-            13. Receive updates or newsletters?
+            13. Would you like to receive updates?
           </label>
           <select
             id="updates"
@@ -434,7 +432,7 @@ const AccountSetupForm = () => {
             htmlFor="frequency"
             className="block text-gray-300 font-bold mb-2"
           >
-            14. Frequency of communications:
+            14. Frequency of updates:
           </label>
           <select
             id="frequency"
@@ -449,16 +447,12 @@ const AccountSetupForm = () => {
           </select>
         </div>
 
-        <h2 className={`${styles.heading2} mb-6 text-white`}>
-          Accessibility and Convenience
-        </h2>
-
         <div className="mb-4">
           <label
             htmlFor="accessibility"
             className="block text-gray-300 font-bold mb-2"
           >
-            15. Require accessibility accommodations?
+            15. Any accessibility requirements:
           </label>
           <input
             id="accessibility"
@@ -474,6 +468,10 @@ const AccountSetupForm = () => {
             </div>
           ) : null}
         </div>
+
+        <h2 className={`${styles.heading2} mb-6 text-white`}>
+          Payment and Billing
+        </h2>
 
         <div className="mb-4">
           <label
@@ -502,7 +500,7 @@ const AccountSetupForm = () => {
             htmlFor="quickAccess"
             className="block text-gray-300 font-bold mb-2"
           >
-            17. Set up quick access to features or services?
+            17. Quick access enabled?
           </label>
           <select
             id="quickAccess"
@@ -516,16 +514,14 @@ const AccountSetupForm = () => {
           </select>
         </div>
 
-        <h2 className={`${styles.heading2} mb-6 text-white`}>
-          Feedback and Interests
-        </h2>
+        <h2 className={`${styles.heading2} mb-6 text-white`}>Hobbies</h2>
 
         <div className="mb-4">
           <label
             htmlFor="hobbies"
             className="block text-gray-300 font-bold mb-2"
           >
-            18. Hobbies or interests:
+            18. Hobbies and interests:
           </label>
           <input
             id="hobbies"
@@ -541,6 +537,8 @@ const AccountSetupForm = () => {
             </div>
           ) : null}
         </div>
+
+        <h2 className={`${styles.heading2} mb-6 text-white`}>Feedback</h2>
 
         <div className="mb-4">
           <label
@@ -569,7 +567,7 @@ const AccountSetupForm = () => {
             htmlFor="expectations"
             className="block text-gray-300 font-bold mb-2"
           >
-            20. Expectations from this service:
+            20. Expectations from us:
           </label>
           <input
             id="expectations"
@@ -591,7 +589,7 @@ const AccountSetupForm = () => {
             htmlFor="experienceImprovement"
             className="block text-gray-300 font-bold mb-2"
           >
-            21. Anything to make your experience better?
+            21. How can we improve your experience?
           </label>
           <input
             id="experienceImprovement"
@@ -609,7 +607,7 @@ const AccountSetupForm = () => {
         </div>
 
         <h2 className={`${styles.heading2} mb-6 text-white`}>
-          Legal and Privacy
+          Privacy and Terms
         </h2>
 
         <div className="mb-4">
@@ -617,7 +615,7 @@ const AccountSetupForm = () => {
             htmlFor="termsAgree"
             className="block text-gray-300 font-bold mb-2"
           >
-            22. Agree to terms of service and privacy policy?
+            22. Do you agree to the terms and conditions?
           </label>
           <select
             id="termsAgree"
@@ -636,7 +634,7 @@ const AccountSetupForm = () => {
             htmlFor="privacyConcerns"
             className="block text-gray-300 font-bold mb-2"
           >
-            23. Any data or privacy concerns?
+            23. Any privacy concerns:
           </label>
           <input
             id="privacyConcerns"
@@ -653,16 +651,12 @@ const AccountSetupForm = () => {
           ) : null}
         </div>
 
-        <h2 className={`${styles.heading2} mb-6 text-white`}>
-          Finalizing Setup
-        </h2>
-
         <div className="mb-4">
           <label
             htmlFor="additionalComments"
             className="block text-gray-300 font-bold mb-2"
           >
-            24. Anything else to add or ask?
+            24. Additional comments:
           </label>
           <input
             id="additionalComments"
@@ -672,14 +666,21 @@ const AccountSetupForm = () => {
             value={formik.values.additionalComments}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-gray-600"
           />
+          {formik.errors.additionalComments ? (
+            <div className="text-red-500 text-xs italic mt-2">
+              {formik.errors.additionalComments}
+            </div>
+          ) : null}
         </div>
 
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Submit
-        </button>
+        <div className="flex items-center justify-between">
+          <button
+            type="submit"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );

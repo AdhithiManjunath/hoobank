@@ -38,10 +38,14 @@ const Login = () => {
           </div>
         </div>
         <h1 className="text-2xl font-bold mb-2 text-center">Sign in</h1>
-        <p className="text-center mb-6">Keep it all together and you'll be fine</p>
+        <p className="text-center mb-6">
+          Keep it all together and you'll be fine
+        </p>
         <form onSubmit={handleLogin}>
           <div className="mb-4">
-            <label htmlFor="email" className="block font-bold mb-2">E-mail or phone</label>
+            <label htmlFor="email" className="block font-bold mb-2">
+              E-mail or phone
+            </label>
             <input
               type="email"
               id="email"
@@ -53,7 +57,9 @@ const Login = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className="block font-bold mb-2">Password</label>
+            <label htmlFor="password" className="block font-bold mb-2">
+              Password
+            </label>
             <input
               type="password"
               id="password"
@@ -65,15 +71,26 @@ const Login = () => {
             />
           </div>
           {error && <p className="text-red-500 text-xs italic mb-4">{error}</p>}
-          <div className="flex justify-between items-center mb-4">
-            <a href="#" className="text-gray-400 text-sm hover:text-white">Forgot Password</a>
+          <div className="flex  justify-between items-center mb-4">
+            <a href="#" className="text-gray-400 text-sm hover:text-white">
+              Forgot Password
+            </a>
           </div>
-          <button
-            type="submit"
-            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
-          >
-            Sign in
-          </button>
+          <div className="flex felx-row gap-3 justify-between items-center">
+            <button
+              type="submit"
+              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+            >
+              Sign in
+            </button>
+            <button
+              type="button"
+              onClick={handleSignupRedirect}
+              className="bg-purple-300 hover:bg-purple-500 text-gray font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+            >
+              Sign up
+            </button>
+          </div>
         </form>
       </div>
     </div>

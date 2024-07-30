@@ -101,7 +101,7 @@ const Signup = () => {
               />
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className=" mt-10 flex flex-col gap-3 justify-between items-center">
               <button
                 type="submit"
                 className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
@@ -111,7 +111,7 @@ const Signup = () => {
               <button
                 type="button"
                 onClick={handleLoginRedirect}
-                className="text-gray-400 hover:text-white font-bold py-2 px-4 rounded focus:outline-none"
+                className="bg-purple-300 hover:bg-purple-500 text-gray font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
               >
                 Login
               </button>
